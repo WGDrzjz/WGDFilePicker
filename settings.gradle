@@ -1,0 +1,3 @@
+rootProject.name = "WGDFilePicker"
+include ':app'
+include ':wgdFilePickerLib'
