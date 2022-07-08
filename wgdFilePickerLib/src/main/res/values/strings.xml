@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="empty_data">无数据</string>
+    <string name="file_normal">常用文件</string>
+    <string name="file_all">全部文件</string>
+    <string name="file_select_max">最多选择%d个文件</string>
+</resources>

@@ -1,0 +1,15 @@
+<resources>
+    <dimen name="txt_size_18">18sp</dimen>
+    <dimen name="txt_size_20">20sp</dimen>
+    <dimen name="txt_size_10">10sp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+
+    <dimen name="padding_20">20dip</dimen>
+    <dimen name="padding_16">16dip</dimen>
+    <dimen name="padding_10">10dip</dimen>
+    <dimen name="padding_8">8dip</dimen>
+    <dimen name="padding_6">6dip</dimen>
+    <dimen name="padding_4">4dip</dimen>
+    <dimen name="padding_1">1dip</dimen>
+
+</resources>
