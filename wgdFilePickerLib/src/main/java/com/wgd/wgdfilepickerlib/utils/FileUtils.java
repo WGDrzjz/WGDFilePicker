@@ -1,6 +1,4 @@
 package com.wgd.wgdfilepickerlib.utils;
-import android.util.Log;
-
 import com.wgd.wgdfilepickerlib.WGDPickerManager;
 import com.wgd.wgdfilepickerlib.bean.FileEntity;
 import com.wgd.wgdfilepickerlib.bean.FileType;
@@ -43,9 +41,13 @@ public class FileUtils {
             }
             FileType fileType = getFileTypeNoFolder(WGDPickerManager.getInstance().mFileTypes, absolutePath);
             e.setFileType(fileType);
+            if (!f.isDirectory()){
+                e.setSize(""+f.length());
+            }
             if (WGDPickerManager.getInstance().files.contains(e)) {
                 e.setSelected(true);
             }
+            e.setName(f.getName());
             entities.add(e);
         }
         return entities;
