@@ -23,6 +23,7 @@
                     android:layout_height="30dp"
                     android:background="@mipmap/back"
                     android:paddingLeft="10dp"
+                    android:layout_marginLeft="@dimen/padding_16"
                     />
                 <TextView
                     android:id="@+id/tv_back"

@@ -2,6 +2,7 @@ package com.wgd.wgdfilepickerlib.bean;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.text.TextUtils;
 
 import java.io.File;
 
@@ -104,7 +105,7 @@ public class FileEntity implements Parcelable {
     }
 
     public String getMimeType() {
-        return mimeType;
+        return null==mimeType|| TextUtils.isEmpty(mimeType)?"文件":mimeType;
     }
 
     public void setMimeType(String mimeType) {

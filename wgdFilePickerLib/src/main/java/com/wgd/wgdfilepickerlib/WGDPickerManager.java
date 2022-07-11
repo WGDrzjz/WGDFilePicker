@@ -34,8 +34,15 @@ public class WGDPickerManager {
     public ArrayList<FileEntity> files;
     /**
      * 筛选条件 类型
+     * 最近文件中使用
      */
     public ArrayList<FileType> mFileTypes;
+    /**
+     * 筛选条件 类型
+     * 全部文件中使用
+     */
+    private String[] mFileTypesAll = new String[]{};
+
     /**
      * 文件夹筛选
      * 这里包括 微信和QQ中的下载的文件和图片
@@ -45,6 +52,14 @@ public class WGDPickerManager {
         files = new ArrayList<>();
         mFileTypes = new ArrayList<>();
         initDocTypes();
+    }
+
+    public String[] getmFileTypesAll() {
+        return mFileTypesAll;
+    }
+
+    public void setmFileTypesAll(String[] mFileTypesAll) {
+        this.mFileTypesAll = mFileTypesAll;
     }
 
     public void addDocTypes(List<FileType> fileTypes) {

@@ -1,4 +1,6 @@
 package com.wgd.wgdfilepickerlib.utils;
+import android.util.Log;
+
 import com.wgd.wgdfilepickerlib.WGDPickerManager;
 import com.wgd.wgdfilepickerlib.bean.FileEntity;
 import com.wgd.wgdfilepickerlib.bean.FileType;
@@ -70,7 +72,7 @@ public class FileUtils {
             if (path.contains(str)) {
                 for (int index = 0; index < fileTypes.size(); index++) {//按照文件类型筛选
                     for (String string : fileTypes.get(index).filterType) {
-                        if (path.endsWith(string))
+                        if (path.endsWith(string.toLowerCase())||path.endsWith(string.toUpperCase()))
                             return fileTypes.get(index);
                     }
                 }
@@ -83,7 +85,7 @@ public class FileUtils {
     public static FileType getFileTypeNoFolder(ArrayList<FileType> fileTypes, String path) {
         for (int index = 0; index < fileTypes.size(); index++) {//按照文件类型筛选
             for (String string : fileTypes.get(index).filterType) {
-                if (path.endsWith(string))
+                if (path.endsWith(string.toLowerCase())||path.endsWith(string.toUpperCase()))
                     return fileTypes.get(index);
             }
         }

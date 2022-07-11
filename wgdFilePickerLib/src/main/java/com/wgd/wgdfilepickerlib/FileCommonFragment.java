@@ -13,18 +13,24 @@ import android.webkit.MimeTypeMap;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 import com.wgd.baservadapterx.CommonAdapter;
+import com.wgd.baservadapterx.MultiItemTypeAdapter;
 import com.wgd.baservadapterx.base.ViewHolder;
 import com.wgd.wgdfilepickerlib.bean.FileEntity;
 import com.wgd.wgdfilepickerlib.bean.FileType;
 import com.wgd.wgdfilepickerlib.thraed.ThreadManager;
 import com.wgd.wgdfilepickerlib.utils.FileUtils;
+import com.wgd.wgdfilepickerlib.utils.Utils;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -63,6 +69,7 @@ public class FileCommonFragment extends BaseFragment{
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         rvCommonFile.setLayoutManager(layoutManager);
+//        rvCommonFile.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.HORIZONTAL));
         adapter = new CommonAdapter<FileEntity>(getActivity(), R.layout.item_file_picker, datas) {
             @Override
             protected void convert(ViewHolder holder, FileEntity adapterDataBean, int position) {
@@ -76,20 +83,34 @@ public class FileCommonFragment extends BaseFragment{
                 if (null!=file&&file.isDirectory()) {
                     iv_type.setImageResource(R.mipmap.file_picker_folder);
                     iv_choose.setVisibility(View.GONE);
+                    tv_detail.setVisibility(View.GONE);
+                    tv_file_size.setVisibility(View.GONE);
+                    Utils.setViewSize(iv_type, 60, 60);
                 } else {
                     if(adapterDataBean.getFileType()!=null){
                         String title = adapterDataBean.getFileType().getTitle();
                         if (title.equals("IMG")) {
                             Glide.with(mContext).load(new File(adapterDataBean.getPath())).into(iv_type);
+                            Utils.setViewSize(iv_type, 120, 120);
                         } else {
                             iv_type.setImageResource(adapterDataBean.getFileType().getIconStyle());
+                            Utils.setViewSize(iv_type, 60, 60);
                         }
                     }else {
                         iv_type.setImageResource(R.mipmap.file_picker_def);
+                        Utils.setViewSize(iv_type, 60, 60);
                     }
-                    iv_choose.setVisibility(View.VISIBLE);
+
+                    if (WGDPickerManager.getInstance().maxCount<=1){
+                        iv_choose.setVisibility(View.GONE);
+                    }else {
+                        iv_choose.setVisibility(View.VISIBLE);
+                    }
+
                     tv_file_size.setText("大小："+FileUtils.getReadableFileSize(new File(adapterDataBean.getPath()).length()));
                     tv_detail.setText("类型："+adapterDataBean.getMimeType());
+                    tv_detail.setVisibility(View.VISIBLE);
+                    tv_file_size.setVisibility(View.VISIBLE);
                     if (adapterDataBean.isSelected()) {
                         iv_choose.setImageResource(R.drawable.file_selection);
                     } else {
@@ -98,6 +119,45 @@ public class FileCommonFragment extends BaseFragment{
                 }
             }
         };
+        adapter.setOnItemClickListener(new MultiItemTypeAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, RecyclerView.ViewHolder holder, int position) {
+                try {
+                    FileEntity entity = datas.get(position);
+                    String absolutePath = entity.getPath();
+                    ArrayList<FileEntity> files = WGDPickerManager.getInstance().files;
+                    if (WGDPickerManager.getInstance().maxCount<=1){
+                        files.add(entity);
+                        if (null!=jcFragmentSelect)jcFragmentSelect.onSelecte(BaseFragment.SELECTE_FILE_RESULT, files );
+                        WGDPickerManager.getInstance().files.clear();
+                        getActivity().finish();
+                    }else if(files.contains(entity)){
+                        files.remove(entity);
+                        if (null!=jcFragmentSelect)jcFragmentSelect.onSelecte(BaseFragment.SELECTE_TYPE_NUM_CHANGE, null );
+                        entity.setSelected(!entity.isSelected());
+                        adapter.notifyDataSetChanged();
+                    }else {
+                        if(WGDPickerManager.getInstance().files.size()<WGDPickerManager.getInstance().maxCount){
+                            files.add(entity);
+                            if (null!=jcFragmentSelect)jcFragmentSelect.onSelecte(BaseFragment.SELECTE_TYPE_NUM_CHANGE, null );
+                            entity.setSelected(!entity.isSelected());
+                            adapter.notifyDataSetChanged();
+                        }else {
+                            Toast.makeText(getContext(),getString(R.string.file_select_max,WGDPickerManager.getInstance().maxCount),Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+
+            }
+
+            @Override
+            public boolean onItemLongClick(View view, RecyclerView.ViewHolder holder, int position) {
+                return false;
+            }
+
+        });
         rvCommonFile.setAdapter(adapter);
         initData();
     }

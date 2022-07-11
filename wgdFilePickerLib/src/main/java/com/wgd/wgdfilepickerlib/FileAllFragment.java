@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.ImageView;
@@ -26,6 +27,7 @@ import com.wgd.wgdfilepickerlib.bean.FileType;
 import com.wgd.wgdfilepickerlib.thraed.ThreadManager;
 import com.wgd.wgdfilepickerlib.utils.FileSelectFilter;
 import com.wgd.wgdfilepickerlib.utils.FileUtils;
+import com.wgd.wgdfilepickerlib.utils.Utils;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -55,7 +57,7 @@ public class FileAllFragment extends BaseFragment{
     private String rootPath;
     private FileSelectFilter mFilter;
     //筛选类型条件
-    private String[] mFileTypes = new String[]{};
+//    private String[] mFileTypes = new String[]{};
 
     @Override
     protected int getLayoutResourceID() {
@@ -72,6 +74,7 @@ public class FileAllFragment extends BaseFragment{
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         rvAllFile.setLayoutManager(layoutManager);
         adapter = new CommonAdapter<FileEntity>(getActivity(), R.layout.item_file_picker, datas) {
+            @SuppressLint("SetTextI18n")
             @Override
             protected void convert(ViewHolder holder, FileEntity adapterDataBean, int position) {
                 ImageView iv_choose = holder.getView(R.id.iv_choose);
@@ -84,20 +87,37 @@ public class FileAllFragment extends BaseFragment{
                 if (file.isDirectory()) {
                     iv_type.setImageResource(R.mipmap.file_picker_folder);
                     iv_choose.setVisibility(View.GONE);
+                    tv_detail.setVisibility(View.GONE);
+                    tv_file_size.setVisibility(View.GONE);
+                    Utils.setViewSize(iv_type, 60, 60);
                 } else {
                     if(adapterDataBean.getFileType()!=null){
                         String title = adapterDataBean.getFileType().getTitle();
                         if (title.equals("IMG")) {
                             Glide.with(mContext).load(new File(adapterDataBean.getPath())).into(iv_type);
+                            Utils.setViewSize(iv_type, 120, 120);
                         } else {
                             iv_type.setImageResource(adapterDataBean.getFileType().getIconStyle());
+                            Utils.setViewSize(iv_type, 60, 60);
                         }
                     }else {
                         iv_type.setImageResource(R.mipmap.file_picker_def);
+                        Utils.setViewSize(iv_type, 60, 60);
                     }
-                    iv_choose.setVisibility(View.VISIBLE);
+
+                    if (WGDPickerManager.getInstance().maxCount<=1){
+                        iv_choose.setVisibility(View.GONE);
+                    }else {
+                        iv_choose.setVisibility(View.VISIBLE);
+                    }
                     tv_file_size.setText(FileUtils.getReadableFileSize(file.length()));
-                    tv_detail.setText("类型："+adapterDataBean.getMimeType());
+                    if (null==adapterDataBean.getFileType()) {
+                        tv_detail.setText("类型：文件");
+                    }else {
+                        tv_detail.setText("类型："+adapterDataBean.getFileType().getTitle());
+                    }
+                    tv_detail.setVisibility(View.VISIBLE);
+                    tv_file_size.setVisibility(View.VISIBLE);
                     if (adapterDataBean.isSelected()) {
                         iv_choose.setImageResource(R.drawable.file_selection);
                     } else {
@@ -109,29 +129,39 @@ public class FileAllFragment extends BaseFragment{
         adapter.setOnItemClickListener(new MultiItemTypeAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, RecyclerView.ViewHolder holder, int position) {
-                FileEntity entity = datas.get(position);
-                //如果是文件夹点击进入文件夹
-                if (entity.getFile().isDirectory()) {
-                    getIntoChildFolder(position);
-                }else {
-                    File file = entity.getFile();
-                    ArrayList<FileEntity> files = WGDPickerManager.getInstance().files;
-                    if(files.contains(entity)){
-                        files.remove(entity);
-                        if (null!=jcFragmentSelect)jcFragmentSelect.onSelecte(BaseFragment.SELECTE_TYPE_NUM_CHANGE);
-                        entity.setSelected(!entity.isSelected());
-                        adapter.notifyItemChanged(position);
+                try {
+                    FileEntity entity = datas.get(position);
+                    //如果是文件夹点击进入文件夹
+                    if (entity.getFile().isDirectory()) {
+                        getIntoChildFolder(position);
                     }else {
-                        if(WGDPickerManager.getInstance().files.size()<WGDPickerManager.getInstance().maxCount){
+                        File file = entity.getFile();
+                        ArrayList<FileEntity> files = WGDPickerManager.getInstance().files;
+                        if (WGDPickerManager.getInstance().maxCount<=1){
                             files.add(entity);
-                            if (null!=jcFragmentSelect)jcFragmentSelect.onSelecte(BaseFragment.SELECTE_TYPE_NUM_CHANGE);
+                            if (null!=jcFragmentSelect)jcFragmentSelect.onSelecte(BaseFragment.SELECTE_FILE_RESULT, files );
+                            WGDPickerManager.getInstance().files.clear();
+                            getActivity().finish();
+                        }else if(files.contains(entity)){
+                            files.remove(entity);
+                            if (null!=jcFragmentSelect)jcFragmentSelect.onSelecte(BaseFragment.SELECTE_TYPE_NUM_CHANGE, null);
                             entity.setSelected(!entity.isSelected());
                             adapter.notifyItemChanged(position);
                         }else {
-                            showToast(getString(R.string.file_select_max,WGDPickerManager.getInstance().maxCount));
+                            if(WGDPickerManager.getInstance().files.size()<WGDPickerManager.getInstance().maxCount){
+                                files.add(entity);
+                                if (null!=jcFragmentSelect)jcFragmentSelect.onSelecte(BaseFragment.SELECTE_TYPE_NUM_CHANGE, null);
+                                entity.setSelected(!entity.isSelected());
+                                adapter.notifyItemChanged(position);
+                            }else {
+                                showToast(getString(R.string.file_select_max,WGDPickerManager.getInstance().maxCount));
+                            }
                         }
                     }
+                }catch (Exception e){
+                    e.printStackTrace();
                 }
+
             }
 
             @Override
@@ -202,7 +232,7 @@ public class FileAllFragment extends BaseFragment{
             showToast("sd卡不可用");
             return null;
         }
-        mFilter = new FileSelectFilter(mFileTypes);
+        mFilter = new FileSelectFilter(WGDPickerManager.getInstance().getmFileTypesAll());
         return getFileList(mPath);
     }
     /**

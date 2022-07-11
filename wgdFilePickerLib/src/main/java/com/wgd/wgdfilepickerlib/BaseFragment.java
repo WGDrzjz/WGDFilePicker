@@ -10,7 +10,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.wgd.wgdfilepickerlib.bean.FileEntity;
+
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Author: wangguodong
@@ -23,10 +26,10 @@ public abstract class BaseFragment extends Fragment implements Serializable {
     public FragmentSelect jcFragmentSelect;
 
     public static final int SELECTE_TYPE_NUM_CHANGE = 0;//选择数量更新；
-    public static final int SELECTE_TYPE_FRIEND = 1;//好友选择（名片消息）；
+    public static final int SELECTE_FILE_RESULT = 1;//文件选择；
 
     public static interface FragmentSelect {
-        void onSelecte(int type, Object... objects);
+        void onSelecte(int type, List<FileEntity> files, Object... objects);
     }
 
     public FragmentSelect getFragmentSelect() {
