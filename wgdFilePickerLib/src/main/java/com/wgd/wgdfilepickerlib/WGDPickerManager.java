@@ -91,6 +91,12 @@ public class WGDPickerManager {
         String[] txts = {"txt"};
         addDocType(new FileType("TXT",txts,R.mipmap.file_picker_txt));
 
+        String[] audios = {"m4a","mid","xmf","ogg","wav","mp3"};
+        addDocType(new FileType("AUDIO",audios,R.mipmap.file_picker_audio));
+
+        String[] videos = {"mp4","avi","3gp"};
+        addDocType(new FileType("VIDEO",videos,R.mipmap.file_picker_video));
+
         String[] imgs = {"png","jpg","jpeg","gif"};
         addDocType(new FileType("IMG",imgs,0));
     }
