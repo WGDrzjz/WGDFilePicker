@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand />
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="86791d69-396c-4a3d-a113-4f4ab02dd909" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/wgdFilePickerLib/src/main/java/com/wgd/wgdfilepickerlib/FileAllFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/wgdFilePickerLib/src/main/java/com/wgd/wgdfilepickerlib/FileAllFragment.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[SerialNumber@8PAISWUGGUIRMNBU]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="WGDFilePicker" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="valueResourceFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="main" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2BY1vLtz1SKQKigMspy3r3z4JJ5" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="android-custom-viewC:/Users/电脑/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
+    <property name="android.sdk.path" value="$PROJECT_DIR$/../../Adroid/SDK" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/wgdFilePickerLib/src/main/res/mipmap" />
+    <property name="project.structure.last.edited" value="Dependencies" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.wgd.wgdfilepickerlib.utils" />
+      <recent name="com.wgd.wgdfilepickerlib" />
+      <recent name="com.wgd.wgdfilepickerlib.bean" />
+      <recent name="com.wgd.wgdfilepickerlib.thraed" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\res\mipmap" />
+      <recent name="D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker" />
+      <recent name="D:\AS\AndroidStudioProjects\WGDFilePicker\wgdFilePickerlib\src\main\res\layout" />
+      <recent name="D:\AS\AndroidStudioProjects\WGDFilePicker\wgdFilePickerlib\src\main\java\com\wgd\wgdfilepickerlib" />
+      <recent name="D:\AS\AndroidStudioProjects\WGDFilePicker\wgdFilePickerlib\src\main\res\drawable" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="WGDFilePicker.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="86791d69-396c-4a3d-a113-4f4ab02dd909" name="Default Changelist" comment="" />
+      <created>1657068434421</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657068434421</updated>
+    </task>
+    <task id="LOCAL-00001" summary="调整adapter库使用">
+      <created>1657263331039</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1657263331040</updated>
+    </task>
+    <task id="LOCAL-00002" summary="调整rootProject.name">
+      <created>1657269796857</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1657269796857</updated>
+    </task>
+    <task id="LOCAL-00003" summary="调整">
+      <created>1657272632270</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657272632270</updated>
+    </task>
+    <task id="LOCAL-00004" summary="调整">
+      <created>1657275998062</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657275998062</updated>
+    </task>
+    <task id="LOCAL-00005" summary="优化页面显示、文件选择等功能">
+      <created>1657519928281</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657519928281</updated>
+    </task>
+    <task id="LOCAL-00006" summary="优化全部文件中选择的文件实体名称就、大小数据">
+      <created>1657529995217</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1657529995217</updated>
+    </task>
+    <task id="LOCAL-00007" summary="增加文件类型：音频视频">
+      <created>1657692209015</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1657692209015</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="调整adapter库使用" />
+    <MESSAGE value="调整rootProject.name" />
+    <MESSAGE value="调整" />
+    <MESSAGE value="优化页面显示、文件选择等功能" />
+    <MESSAGE value="优化全部文件中选择的文件实体名称就、大小数据" />
+    <MESSAGE value="增加文件类型：音频视频" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加文件类型：音频视频" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="478" y="271" key="#PSD" timestamp="1657263196729">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="478" y="271" key="#PSD/0.0.1920.1050@0.0.1920.1050" timestamp="1657263196729" />
+    <state x="766" y="231" key="#com.intellij.ide.util.MemberChooser" timestamp="1657511468977">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="766" y="231" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1657511468977" />
+    <state x="795" y="312" key="AndroidCreateXmlResourceDialog" timestamp="1657069160503">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="795" y="312" key="AndroidCreateXmlResourceDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1657069160503" />
+    <state x="510" y="95" key="CommitChangelistDialog2" timestamp="1657692207799">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="510" y="95" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1657692207799" />
+    <state x="93" y="93" width="1733" height="863" key="DiffContextDialog" timestamp="1657270790765">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="93" y="93" width="1733" height="863" key="DiffContextDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1657270790765" />
+    <state x="741" y="280" key="FileChooserDialogImpl" timestamp="1657266429051">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="741" y="280" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1657266429051" />
+    <state width="1878" height="285" key="GridCell.Tab.0.bottom" timestamp="1657522334294">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1878" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1657522334294" />
+    <state width="1878" height="285" key="GridCell.Tab.0.center" timestamp="1657522334294">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1878" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1657522334294" />
+    <state width="1878" height="285" key="GridCell.Tab.0.left" timestamp="1657522334293">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1878" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1657522334293" />
+    <state width="1878" height="285" key="GridCell.Tab.0.right" timestamp="1657522334294">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1878" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1657522334294" />
+    <state x="462" y="170" key="SettingsEditor" timestamp="1657327371868">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="462" y="170" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1657327371868" />
+    <state x="553" y="258" key="Vcs.Push.Dialog.v2" timestamp="1657692251209">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="553" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1657692251209" />
+    <state x="662" y="256" width="594" height="536" key="find.popup" timestamp="1657528052147">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="662" y="256" width="594" height="536" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1657528052147" />
+    <state x="516" y="266" key="psd.add.library.dependency.panel.dimension" timestamp="1657096726783">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="516" y="266" key="psd.add.library.dependency.panel.dimension/0.0.1920.1050@0.0.1920.1050" timestamp="1657096726783" />
+    <state x="677" y="168" key="psd.add.module.dependency.panel.dimension" timestamp="1657175629466">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="677" y="168" key="psd.add.module.dependency.panel.dimension/0.0.1920.1050@0.0.1920.1050" timestamp="1657175629466" />
+  </component>
+</project>

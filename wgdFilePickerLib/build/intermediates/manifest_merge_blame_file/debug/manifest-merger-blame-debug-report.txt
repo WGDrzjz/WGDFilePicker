@@ -1,0 +1,28 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.wgd.wgdfilepickerlib" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="19"
+6-->D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml
+7        android:targetSdkVersion="30" />
+7-->D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml
+8
+9    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+9-->D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml:4:5-79
+9-->D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml:4:22-77
+10    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+10-->D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml:5:5-80
+10-->D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml:5:22-78
+11
+12    <application>
+12-->D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml:7:5-10:19
+13        <activity
+13-->D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml:8:9-9:38
+14            android:name="com.wgd.wgdfilepickerlib.FilePickerActivity"
+14-->D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml:8:19-53
+15            android:exported="true" />
+15-->D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml:9:13-36
+16    </application>
+17
+18</manifest>

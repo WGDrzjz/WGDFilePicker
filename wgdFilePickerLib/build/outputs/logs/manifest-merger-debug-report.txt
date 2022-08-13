@@ -1,0 +1,41 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml:2:1-11:12
+INJECTED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml:2:1-11:12
+INJECTED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml:2:1-11:12
+	package
+		ADDED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml:3:5-39
+		INJECTED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml
+		INJECTED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml:4:5-79
+	android:name
+		ADDED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml:4:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml:5:5-80
+	android:name
+		ADDED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml:5:22-78
+application
+ADDED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml:7:5-10:19
+activity#com.wgd.wgdfilepickerlib.FilePickerActivity
+ADDED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml:8:9-9:38
+	android:exported
+		ADDED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml:9:13-36
+	android:name
+		ADDED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml:8:19-53
+uses-sdk
+INJECTED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml
+INJECTED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml
+INJECTED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml
+INJECTED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml
+		ADDED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml
+		INJECTED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml
+		ADDED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml
+		INJECTED from D:\AS\AndroidStudioProjects\WGDFilePicker\WGDFilePicker\wgdFilePickerLib\src\main\AndroidManifest.xml

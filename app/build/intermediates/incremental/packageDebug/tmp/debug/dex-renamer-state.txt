@@ -1,0 +1,4 @@
+#Sat Aug 13 10:42:15 CST 2022
+base.0=D\:\\AS\\AndroidStudioProjects\\WGDFilePicker\\WGDFilePicker\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

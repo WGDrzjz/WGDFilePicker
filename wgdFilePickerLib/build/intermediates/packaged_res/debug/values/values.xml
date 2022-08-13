@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_gray">#EDEDED</color>
+    <color name="black">#000000</color>
+    <color name="blue">#44B2FE</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryChat">#04b0fa</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="file_bottom_line">#ECECEC</color>
+    <color name="file_picker_des">#86848B</color>
+    <color name="file_picker_title">#4A4A4A</color>
+    <color name="white">#ffffff</color>
+    <dimen name="padding_1">1dip</dimen>
+    <dimen name="padding_10">10dip</dimen>
+    <dimen name="padding_16">16dip</dimen>
+    <dimen name="padding_20">20dip</dimen>
+    <dimen name="padding_4">4dip</dimen>
+    <dimen name="padding_6">6dip</dimen>
+    <dimen name="padding_8">8dip</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="txt_size_10">10sp</dimen>
+    <dimen name="txt_size_18">18sp</dimen>
+    <dimen name="txt_size_20">20sp</dimen>
+    <string name="empty_data">无数据</string>
+    <string name="file_all">全部文件</string>
+    <string name="file_normal">常用文件</string>
+    <string name="file_select_max">最多选择%d个文件</string>
+</resources>

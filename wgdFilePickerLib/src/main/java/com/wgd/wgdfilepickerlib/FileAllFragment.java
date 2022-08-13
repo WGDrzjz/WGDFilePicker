@@ -243,11 +243,17 @@ public class FileAllFragment extends BaseFragment{
      */
     private List<FileEntity> getFileList(String path) {
         List<FileEntity> fileListByDirPath = FileUtils.getFileListByDirPath(path, mFilter);
-        if(fileListByDirPath.size()>0){
-            emptyView.setVisibility(View.GONE);
-        }else {
-            emptyView.setVisibility(View.VISIBLE);
-        }
+        ThreadManager.onMainHandler(new Runnable() {
+            @Override
+            public void run() {
+                if(fileListByDirPath.size()>0){
+                    emptyView.setVisibility(View.GONE);
+                }else {
+                    emptyView.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
         for (int i = 0; i < WGDPickerManager.getInstance().files.size(); i++) {
             for (int j = 0; j < fileListByDirPath.size(); j++) {
                 FileEntity entity = fileListByDirPath.get(j);
